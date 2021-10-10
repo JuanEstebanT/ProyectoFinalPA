@@ -1,9 +1,6 @@
 package Controladores;
-
 import Modelos.*;
 import Vistas.Tablero;
-import Vistas.Vista_prin;
-
 import java.awt.*;
 import java.util.ArrayList;
 import javax.swing.*;
@@ -90,7 +87,7 @@ public class Controlador_juego {
         }
     }
 
-    /* Comparar la posicion de la comida y regresa un boleano si se tocan*/
+    /* Comparar la posicion de la comida y regresa un boleano si se tocan con la comida*/
     public static boolean Comparar_pos(){
         boolean ver = false;
         if(comida.Verificar_collison(culebra.getX(), culebra.getY())){
@@ -98,7 +95,7 @@ public class Controlador_juego {
         }
         return ver;
     }
-
+    /* si toca los bordes se trasporta */
     public static void PosCul(){
         if (culebra.getX() > 31){
             culebra.setX(0);
@@ -118,7 +115,7 @@ public class Controlador_juego {
         if(((Cabeza)culebra).Verificar()){
             ventana.dispose();
             DetenerHilos();
-            //lugar donde daberia ir un JOPTION para ingresar (nombre del jugador y el getComida generada)scores serializarlos
+            // lugar donde daberia ir un JOPTION para ingresar (nombre del jugador y el getComida generada)scores serializarlos
             // sugerencia crear un nuevo frame para visualizar los scores en una ventana a traves de el boton scores
         }
     }

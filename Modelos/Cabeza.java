@@ -17,13 +17,6 @@ public class Cabeza extends Parte implements Runnable{
         agregarC();
     }
 
-    public void setEstado(boolean estado) {
-        this.estado = estado;
-    }
-    public boolean getEstado() {
-        return estado;
-    }
-
     @Override
     public void run() {
         while(estado){

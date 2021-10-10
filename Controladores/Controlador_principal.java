@@ -9,6 +9,9 @@ public class Controlador_principal{
                Controlador_juego.iniciar();
                Vista.dispose();
         });
+        Vista.scoresButton.addActionListener(e -> {
+
+        });
     }
 
 }
